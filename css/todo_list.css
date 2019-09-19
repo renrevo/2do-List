@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #f7f7f7;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/todo.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+    max-width: 90%;
+    width: 480px;
+}
+
+.top-container {
+    background-color: #0084ff;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+}
+
+.name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.input-container,
+.task-container {
+    margin: 10px;
+}
+
+.input-container::after,
+.task-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.input-container #task-input {
+    padding: 5px 10px;
+    width: 75%;
+    font-size: 1.1rem;
+    height: 35px;
+    color: #696969;
+    background-color: #f7f7f7;
+    border: 1px solid rgb(233, 233, 233);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    float: left;
+    outline: none;
+}
+
+#task-input:focus {
+    color: #0f0f0f;
+    border: 1px solid #0084ff;
+}
+
+.input-container #add-btn {
+    width: 25%;
+    height: 35px;
+    float: left;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    color: #f7f7f7;
+    background-color: #0084ff;
+    cursor: pointer;
+    outline: none;
+}
+
+.input-container #add-btn:hover {
+    background-color: #0077e6;
+}
+
+.task-container ul li {
+    padding: 10px 0 10px 10px;
+    font-size: 1rem;
+    float: left;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #ff74ae;
+    margin: 1px 0;
+}
+
+.task-container ul li:nth-child(2n) {
+    background-color: #ff3187;
+}
+
+.task-container ul li:hover {
+    background-color: #ce1662;
+}
+
+.task-container ul li .icon {
+    float: right;
+    width: 10%;
+    text-align: center;
+    border-left: 1px solid #fff;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+
+.tasks {
+    list-style: none;
+    cursor: pointer;
+}
